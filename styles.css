@@ -1,10 +1,53 @@
-.background-img {
-    background-image: url('/images/interaction-florals.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+
+
+a{
+    text-decoration: none;
 }
 
+.blue-flowers{
+    background-image: url("/images/blue-floral.png");
+}
+
+html {
+  font-size: 10px;
+  width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-button{
+    background-color: #D78682;
+    border-radius: 1.5rem;
+}
+.logo-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 3rem;
+}
+
+nav ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+width: 1440px;
+  height: 60px;
+}
+
+.pink-right-big{
+     position: relative;
+  top: 90;
+  left: 60%;
+}
+.hero-text{
+    position: relative;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+/*JS MODAL*/
 *,
 *::after,
 *::before {
