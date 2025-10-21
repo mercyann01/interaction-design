@@ -14,10 +14,17 @@ html {
   margin-left: auto;
   margin-right: auto;
 }
-
+.hero-button:hover{
+    background-color: #F1ABA9;
+}
 .hero-button{
     background-color: #D78682;
     border-radius: 1.5rem;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
 }
 .logo-nav {
   display: flex;
