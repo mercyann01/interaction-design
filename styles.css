@@ -1,11 +1,17 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Poller+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Poller+One&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+@import url("reset.css");
 
 a{
     text-decoration: none;
+    color: #000000;
 }
 
 .blue-flowers{
     background-image: url("/images/blue-floral.png");
+    z-index: 50;
+    background-repeat: no-repeat;
 }
 
 html {
@@ -13,6 +19,36 @@ html {
   width: 1440px;
   margin-left: auto;
   margin-right: auto;
+}
+
+h1{
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  line-height: 9.6rem;
+  font-size: 9.6rem;
+}
+h2{
+    font-family: "Londrina Solid", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  line-height: 10.56rem;
+  font-size: 14.4rem;
+  color: #034362;
+}
+h3{
+      font-family: "Londrina Solid", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 6.4rem;
+  font-size: 6.4rem;
+  color: #034362;
+margin-top: -10rem;
+}
+
+.hero{
+  display: flex;
+  margin: -10rem;
 }
 .hero-button:hover{
     background-color: #F1ABA9;
@@ -23,9 +59,37 @@ html {
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 15px;
-    padding-bottom: 15px;
-    
+    padding-bottom: 15px;  
 }
+.hero-image{
+  margin-top: -40rem;
+  margin-right: -30rem;
+  z-index: 10;
+}
+.hero-text{
+    position: relative;
+    padding: 14.8rem;
+}
+
+p{
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-weight:500;
+  line-height: 4rem;
+  font-size: 3.6rem;
+}
+.pink-bottom{
+  margin-left: 70rem;
+  padding-top: 10rem;
+}
+
+
+.right{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
 .logo-nav {
   display: flex;
   justify-content: space-between;
@@ -39,15 +103,29 @@ nav ul{
 width: 1440px;
   height: 60px;
 }
+nav li{
+    font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-weight:500;
+  line-height: 1.76rem;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #000000;
+}
+
+
+.flower-container{
+  position: relative;
+  width: 132px;
+  height: 94px;
+}
 
 .pink-right-big{
      position: relative;
   top: 90;
   left: 60%;
 }
-.hero-text{
-    position: relative;
-}
+
 
 ul {
   list-style-type: none;
@@ -68,7 +146,10 @@ ul {
   transition: 200ms ease-in-out;
   border-radius: 10px;
   z-index: 10;
-  background-color: white;
+   background-image: url("/images/modal-group.png");
+    padding: 1000px 1048px;
+  background-position: center center;
+  background-repeat: no-repeat;
 
 }
 
@@ -78,22 +159,30 @@ ul {
 }
 
 
-.modal-header .title {
-  font-size: 1.25rem;
-  font-weight: bold;
-}
+
 
 .modal-header .close-button {
   cursor: pointer;
   border: none;
   outline: none;
-  background: none;
+  background-color: #fff;        
+  color: #0a3a4a;               
   font-size: 1.25rem;
   font-weight: bold;
+  width: 35px;                  
+  height: 35px;
+  border-radius: 50%;            
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;            
+  top: 15px;
+  right: 15px; 
+  transition: background-color 0.2s ease;
 }
 
 .modal-body {
-  padding: 1000px 1048px;
+ width: 450px;
 }
 
 #overlay {
@@ -103,14 +192,9 @@ ul {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("/images/modal-group.png");
-  background-position: center center;
-  background-repeat: no-repeat;
+ background-color: rgba(255, 255, 255, 0.722);
   pointer-events: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    display: none;
+  
 }
 
 #overlay.active {
