@@ -79,12 +79,6 @@ p{
   line-height: 4rem;
   font-size: 3.6rem;
 }
-.pink-bottom{
-  margin-left: 70rem;
-  padding-top: 10rem;
-}
-
-
 .right{
   display: flex;
   flex-direction: column-reverse;
@@ -201,24 +195,46 @@ nav li{
   animation-delay: 0.8s;
 }
 
+
+
+/*bottom flower spin*/
+.pink-bottom{
+  margin-left: 70rem;
+  padding-top: 10rem;
+}
+
+.pink-bottom:hover{
+  transform: rotate(60deg);
+  transition: transform 2s ease-in-out;
+}
+
+/*pink-right-big*/
+
 .pink-right-big{
      position: relative;
   top: 90;
   left: 60%;
 }
 
-/*bottom flower spin*/
+@keyframes pulse-pink {
+  0% {
+    transform: scale(1); 
+  }
+  40% {
+    transform: scale(1.2); 
+  }
+  80%{
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1); 
+  }
+}
+.pink-right-big {
 
-.pink-bottom:active{
-  transform: rotate(60deg);
-  transition: transform 2s ease-in-out;
+  animation: pulse-pink 2s infinite;
 }
 
-
-.pink-right-big:hover {
-  transform: scale(1.5);
-  transition: transform 500ms ease-in-out;
-}
 
 ul {
   list-style-type: none;
