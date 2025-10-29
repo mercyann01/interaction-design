@@ -111,6 +111,10 @@ p{
   display: flex;
   justify-content: space-between;
   margin-right: 3rem;
+  padding-top: 3rem;
+}
+.logo{
+
 }
 
 nav ul{
@@ -132,74 +136,65 @@ nav li{
 
 /*Top left flower animation */
 
-.flower-container{
+.flower-container {
   position: relative;
   width: 132px;
   height: 94px;
-  margin: 50px auto;
+  margin-top: 100px;
+  margin-left: 106px;
 }
-.petal{
+.petal {
   position: absolute;
-  width: 74px;
-  height: 74px;
-  border-radius: 50% 50% 0 0;
-  transform-origin: bottom center;
+  border-radius: 50% 50%;
+  transform-origin: center;
+  animation: bloom 2s ease-out forwards;
 }
 
-.petal-1{
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(0deg);
 
-}
-.petal-2{
-  top: 50%;
-  left: 50%;
-  margin-top: -300rem;
-  transform: translate(-50%, -50%) rotate(60deg);
+.petal-1 {
+  top: 100%;
+  left: 70%;
+  transform: translate(50%, 50%) rotate(60deg);
 }
 
-.petal-3{
+.petal-2 {
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(90deg);
+  left: 40%;
+  margin-top: 1rem;
+  transform: translate(-20%, -20%) rotate(90deg);
+}
+.petal-3 {
+  top: 40%;
+  left: 70%;
+  transform: translate(-50%, -30%) rotate(0deg);
 }
 
-.petal-3{
-  top: 50%;
+.petal-4 {
+  top: 100%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(120deg);
 }
 
-.petal-4{
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(150deg);
+.petal-5 {
+  top: 100%;
+  left: 60%;
+  transform: translate(-50%, -50%) rotate(25deg);
 }
-.petal-5{
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(180deg);
-}
-
 @keyframes bloom {
   0% {
-    transform: translate(-50%, -50%) rotate(0deg) scale(0);
+    transform: translate(50%, 50%) rotate(0deg) scale(0);
     opacity: 0;
   }
   50% {
-    transform: translate(-50%, -50%) rotate(0deg) scale(1.1);
+    transform: translate(50%, 50%) rotate(0deg) scale(1.1);
     opacity: 1;
   }
   100% {
-    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    transform: translate(50%, 50%) rotate(0deg) scale(1);
     opacity: 1;
   }
 }
 
-.petal {
-  animation: bloom 2s ease-out forwards;
-}
 
 .petal-1 {
   animation-delay: 0s;
@@ -217,17 +212,28 @@ nav li{
   animation-delay: 0.8s;
 }
 
-
-
-/*bottom flower spin*/
 .pink-bottom{
   margin-left: 70rem;
-  padding-top: 10rem;
+  padding-top: 10rem;  
 }
 
-.pink-target:hover{
-  transform: rotate(60deg);
-  transition: transform 2s ease-in-out;
+.pink-target{
+   animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+   animation-direction: alternate;
+   animation-timing-function: linear;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(60deg);
+  }
 }
 
 /*pink-right-big*/
@@ -298,10 +304,10 @@ ul {
   outline: none;
   background-color: #fff;        
   color: #0a3a4a; 
-  border-radius: 10px;              
+  border-radius: 90px;              
   font-size: 1.25rem;
   font-weight: bold;
-  width: 35px;                  
+  width: 35px;                 
   height: 35px;
   border-radius: 50%;            
   display: flex;
@@ -321,24 +327,48 @@ ul {
 .modal-btn{
   background-color:#034362;
   color:#fff;
-  padding-left: 75px;
-  padding-right: 75px;
+  padding-left: 135px;
+  padding-right: 135px;
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 20px;
+}
+.modal-btn:hover{
+  background-color: #D78682;
+  color:#034362;
 }
 #email{
   background-color:#fff;
+  
    padding-left: 75px;
   padding-right: 75px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-radius: 20px;
   margin-bottom:2rem;
 }
+
+#label{
+    font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-weight:500;
+  line-height: 1.76rem;
+  font-size: 2.4rem;
+  text-decoration: none;
+  color: #034362;
+}
 input{
   border: none;
+    font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-weight:500;
+  line-height: 1.76rem;
+  font-size: 2.4rem;
+  text-decoration: none;
+  color: #9B8F8F;
+
 }
+
 #overlay {
   position: fixed;
   opacity: 0;
