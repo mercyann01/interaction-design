@@ -144,70 +144,69 @@ p{
   position: absolute;
   border-radius: 50% 50%;
   transform-origin: center;
-  animation: bloom 2s ease-out forwards;
+  animation: bloom 2s ease-in-out forwards;
 }
 
 
 .petal-1 {
-  top: 100%;
-  left: 70%;
-  transform: translate(50%, 50%) rotate(60deg);
+  top: 70%;
+  left: 0%;
+  transform: translate(50%, 50%) rotate(-30deg);
+  animation-delay: 0.1s;
+ animation-timing-function: ease;
 }
 
 .petal-2 {
   top: 50%;
   left: 40%;
   margin-top: 1rem;
-  transform: translate(-20%, -20%) rotate(90deg);
+  transform:  rotate(0deg) !important;
+  animation-delay: 0.2s;
+animation-timing-function: ease;
 }
 .petal-3 {
   top: 40%;
   left: 70%;
-  transform: translate(-50%, -30%) rotate(0deg);
+  transform:  rotate(0deg);
+  animation-delay: 0.4s;
+  animation-timing-function: ease;
+
 }
 
 .petal-4 {
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(120deg);
+  top: 90%;
+  left: 60%;
+  transform: rotate(30deg);
+  animation-delay: 0.5s;
+  animation-timing-function: ease;
+
 }
 
 .petal-5 {
   top: 100%;
   left: 60%;
-  transform: translate(-50%, -50%) rotate(25deg);
+  transform:  rotate(25deg);
+  animation-delay: 0.6s;
+ animation-timing-function: ease; 
+
+  
 }
 @keyframes bloom {
   0% {
-    transform: translate(50%, 50%) rotate(0deg) scale(0);
+    
     opacity: 0;
   }
   50% {
-    transform: translate(50%, 50%) rotate(0deg) scale(1.1);
+    
     opacity: 1;
   }
   100% {
-    transform: translate(50%, 50%) rotate(0deg) scale(1);
+    
     opacity: 1;
   }
 }
 
 
-.petal-1 {
-  animation-delay: 0s;
-}
-.petal-2 {
-  animation-delay: 0.2s;
-}
-.petal-3 {
-  animation-delay: 0.4s;
-}
-.petal-4 {
-  animation-delay: 0.6s;
-}
-.petal-5 {
-  animation-delay: 0.8s;
-}
 
 .pink-bottom{
   margin-left: 70rem;
